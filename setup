@@ -1,0 +1,15 @@
+cd ~
+
+echo "--------Updating all packages--------"
+sudo yum update -y
+
+echo "--------Downloading Tools--------"
+sudo yum install wget unzip jq gettext bash-completion -y
+sudo pip3 install --upgrade pip
+
+echo "--------Removing unneeded docker images--------"
+docker images -q | xargs docker rmi || true
+
+echo "--------Upgrading AWS CLI--------" 
+pip3 install --upgrade --user awscli
+echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
