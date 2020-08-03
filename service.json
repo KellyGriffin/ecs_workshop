@@ -1,0 +1,28 @@
+{
+  "serviceName": "Mysfits-Service",
+  "cluster": "ecsworkshop-cluster",
+  "launchType": "FARGATE",
+  "deploymentConfiguration": {
+    "maximumPercent": 200,
+    "minimumHealthyPercent": 0
+  },
+  "desiredCount": 1,
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "assignPublicIp": "ENABLED",
+      "securityGroups": [
+        "REPLACE_ME_SECURITYGROUP"
+      ],
+      "subnets": [
+        "REPLACE_ME_SUBNETONE",
+        "REPLACE_ME_SUBNETTWO"
+      ]
+    }
+  },
+  "taskDefinition": "mythicalmysfitsservice:v2",
+  "loadBalancers": [{
+    "targetGroupArn": "REPLACE_ME_TARGET_GROUP_ARN",
+    "containerName": "MythicalMysfits-Service",
+    "containerPort": 80
+  }]
+}
