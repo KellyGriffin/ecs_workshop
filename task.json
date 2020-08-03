@@ -11,7 +11,7 @@
   "containerDefinitions": [
     {
       "name": "MythicalMysfits-Service",
-      "image": "REPLACE_ME_IMAGE",
+      "image": "REPLACE_ME_ACCOUNT_ID.dkr.ecr.ap-southeast-2.amazonaws.com/ecsworkshop:v1",
       "portMappings": [
         {
           "containerPort": 80,
