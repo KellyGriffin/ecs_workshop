@@ -19,7 +19,7 @@
       ]
     }
   },
-  "taskDefinition": "mythicalmysfitsservice:v2",
+  "taskDefinition": "mythicalmysfitsservice",
   "loadBalancers": [{
     "targetGroupArn": "REPLACE_ME_TARGET_GROUP_ARN",
     "containerName": "MythicalMysfits-Service",
