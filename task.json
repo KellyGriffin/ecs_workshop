@@ -6,7 +6,7 @@
   "requiresCompatibilities": [
     "FARGATE"
   ],
-  "executionRoleArn": "arn:aws:iam::REPLACE_ME_ACCOUNT_ID:role/aws-service-role/ecs.amazonaws.com/TeamRole",
+  "executionRoleArn": "REPLACE_ME_ECS_TASK_ROLE_ARN",
   "taskRoleArn": "arn:aws:iam::REPLACE_ME_ACCOUNT_ID:role/TeamRole",
   "containerDefinitions": [
     {
