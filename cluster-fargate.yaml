@@ -7,11 +7,6 @@ metadata:
   name: fargate-cluster
   region: ap-southeast-2
 
-nodeGroups:
-  - name: ng-1
-    instanceType: m5.large
-    desiredCapacity: 1
-
 fargateProfiles:
   - name: fp-default
     selectors:
