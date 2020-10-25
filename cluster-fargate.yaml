@@ -17,4 +17,4 @@ fargateProfiles:
     selectors:
       # All workloads in the "default" Kubernetes namespace will be
       # scheduled onto Fargate:
-      - namespace: default
+      - namespace: fargate
