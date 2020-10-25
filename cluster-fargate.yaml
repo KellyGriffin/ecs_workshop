@@ -4,8 +4,13 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: fargate-cluster
+  name: eks-cluster
   region: ap-southeast-2
+
+nodeGroups:
+  - name: ng-1-workers
+    instanceType: m5.large
+    desiredCapacity: 1
 
 fargateProfiles:
   - name: fp-default
@@ -13,6 +18,3 @@ fargateProfiles:
       # All workloads in the "default" Kubernetes namespace will be
       # scheduled onto Fargate:
       - namespace: default
-      # All workloads in the "kube-system" Kubernetes namespace will be
-      # scheduled onto Fargate:
-      - namespace: kube-system
