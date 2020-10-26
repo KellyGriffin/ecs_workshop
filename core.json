@@ -54,6 +54,9 @@ Resources:
       VpcId: !Ref 'VPC'
       CidrBlock: !FindInMap ['SubnetConfig', 'PublicOne', 'CIDR']
       MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: "ecs-subnetone"
   PublicSubnetTwo:
     Type: AWS::EC2::Subnet
     Properties:
@@ -64,6 +67,9 @@ Resources:
       VpcId: !Ref 'VPC'
       CidrBlock: !FindInMap ['SubnetConfig', 'PublicTwo', 'CIDR']
       MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: "ecs-subnettwo"
 
   # Setup networking resources for the subnets.
   InternetGateway:
